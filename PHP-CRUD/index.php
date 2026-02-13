@@ -52,11 +52,11 @@
                                 <td><?= $usuario['nome'] ?></td>
                                 <td><?= $usuario['email'] ?></td>
                                 <td>
-                                    <a href="" class="btn btn-secondary">Vizualizar</a>
-                                    <a href="" class="btn btn-success">Editar</a>
-                                    <form action="" method="POST" class="d-inline">
+                                    <a href="view-usuario.php?id=<?= $usuario['id']?>" class="btn btn-secondary">Vizualizar</a>
+                                    <a href="usuario-edit.php?id=<?= $usuario['id']?>" class="btn btn-success">Editar</a>
+                                    <form action="acoes.php" method="POST" class="d-inline">
                                         <button type="submit" name="delete_usuario"
-                                        value="1" class="btn btn-danger">
+                                        value="<?= $usuario['id'] ?>" class="btn btn-danger">
                                             Excluir
                                         </button>
                                     </form>
